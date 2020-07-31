@@ -1,0 +1,43 @@
+import React from "react"
+import { Link } from "gatsby"
+import { graphql } from "gatsby"
+
+import Layout from "../components/layout"
+
+const TagPageTemplate = ({ data }) => (
+  <Layout pageTitle="Tags Page">
+    <h1 dangerouslySetInnerHTML={{ __html: data.wpgraphql.tag.name }} />
+    {data.wpgraphql.tag.posts.edges.map(({ node }) => (
+      <div key={node.slug}>
+        <Link to={`/${node.slug}`}>
+          <div dangerouslySetInnerHTML={{ __html: node.title }} />
+        </Link>
+        <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+      </div>
+    ))}
+
+    <Link to="/">Go back to the homepage</Link>
+  </Layout>
+)
+
+export default TagPageTemplate
+
+export const query = graphql`
+  query($databaseId: ID!) {
+    wpgraphql {
+      tag(id: $databaseId, idType: DATABASE_ID) {
+        name
+        posts {
+          edges {
+            node {
+              slug
+              databaseId
+              title
+              excerpt
+            }
+          }
+        }
+      }
+    }
+  }
+`
