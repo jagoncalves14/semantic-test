@@ -1,0 +1,32 @@
+// #############################################################################
+// BASE
+
+html {
+  font-size: 62.5%;
+  text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 0.1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-variant-ligatures: none;
+}
+
+body {
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $base-font-color;
+  background-color: $white;
+}
+
+img,
+picture,
+video,
+embed {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}

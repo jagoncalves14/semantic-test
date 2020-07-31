@@ -1,0 +1,60 @@
+@import "../../assets/styles/base.scss";
+
+.horizontal-menu-list {
+  display: flex;
+  height: 100%;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.horizontal-menu-list__item-bullet {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: inline-flex;
+    font-size: 1.3rem;
+    opacity: 0.4;
+  }
+}
+
+.horizontal-menu-list__wrapper {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.horizontal-menu-list--header {
+  display: none;
+  justify-content: center;
+  margin: 0.5rem 0 0 1.4rem;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  .horizontal-menu-list__item {
+    margin: 2.4rem 0;
+    list-style: none;
+
+    a {
+      margin-left: 1.6rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &:hover {
+        opacity: 0.56;
+      }
+
+      &:active {
+        color: orange;
+        opacity: 1;
+      }
+    }
+  }
+}
