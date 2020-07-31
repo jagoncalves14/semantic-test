@@ -28,7 +28,7 @@
     "build-storybook": "NODE_ENV=production build-storybook -s public",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "release": "standard-version"
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "bootstrap-scss": "^4.4.1",
@@ -78,7 +78,7 @@
     "husky": "^4.2.5",
     "prettier": "^2.0.2",
     "rimraf": "^3.0.2",
-    "standard-version": "^7.1.0",
+    "semantic-release": "^17.1.1",
     "stylelint": "^13.2.1",
     "stylelint-config-recess-order": "^2.0.4",
     "stylelint-config-standard": "^20.0.0",
